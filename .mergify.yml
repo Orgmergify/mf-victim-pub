@@ -1,0 +1,11 @@
+queue_rules:
+  - name: default
+    conditions:
+      - check-success=placeholder-check
+pull_request_rules:
+  - name: queue-all
+    conditions:
+      - base=main
+    actions:
+      queue:
+        name: default
